@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio data</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Personal Information Form</h1>
+    <div id="result"></div>
+    <div id="overlay" class="overlay"></div>
+
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select><br><br>
+      
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob_day" name="dob_day" placeholder="Day">
+      <input type="text" id="dob_month" name="dob_month" placeholder="Month">
+      <input type="text" id="dob_year" name="dob_year" placeholder="Year"><br><br>
+      
+      <label for="time">Time of Birth:</label>
+      <input type="text" id="time_hour" name="time_hour" placeholder="Hour">
+      <input type="text" id="time_minute" name="time_minute" placeholder="Minute">
+      <input type="text" id="time_seconds" name="time_seconds" placeholder="Seconds">
+      <select id="time" name="time_period">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select><br><br>
+      
+      <label for="place">Place of Birth:</label>
+      <input type="text" id="place" name="place"><br><br>
+      
+      <label for="rashi">Rashi:</label>
+      <select id="rashi" name="rashi">
+        <option value="rashi1">Rashi 1</option>
+        <option value="rashi2">Rashi 2</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="nakshatra">Nakshatra:</label>
+      <select id="nakshatra" name="nakshatra">
+        <option value="nakshatra1">Nakshatra 1</option>
+        <option value="nakshatra2">Nakshatra 2</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="height">Height:</label>
+      <select id="height" name="height">
+        <option value="height1">Height 1</option>
+        <option value="height2">Height 2</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="marital_status">Marital Status:</label>
+      <select id="marital_status" name="marital_status">
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+      </select><br><br>
+      
+      <label for="religion">Religion:</label>
+      <select id="religion" name="religion">
+        <option value="religion1">Religion 1</option>
+        <option value="religion2">Religion 2</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="mother_tongue">Mother Tongue:</label>
+      <select id="mother_tongue" name="mother_tongue">
+        <option value="mother_tongue1">Mother Tongue 1</option>
+        <option value="mother_tongue2">Mother Tongue 2</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="caste">Caste:</label>
+      <input type="text" id="caste" name="caste"><br><br>
+      
+      <label for="subcaste">Sub-caste:</label>
+      <input type="text" id="subcaste" name="subcaste"><br><br>
+      
+      <label for="gotra">Gotra:</label>
+      <input type="text" id="gotra" name="gotra"><br><br>
+      
+      <label for="manglik">Manglik:</label>
+      <select id="manglik" name="manglik">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select><br><br>
+      
+      <label for="education">Education:</label>
+      <select id="education" name="education">
+        <option value="education1">Education 1</option>
+        <option value="education2">Education 2</option>
+        <!-- Add more options as needed -->
+      </select><br><br>
+      
+      <label for="college">College Name:</label>
+      <input type="text" id="college" name="college"><br><br>
+      
+      <label for="employed_in">Employed in:</label>
+      <input type="text" id="employed_in" name="employed_in"><br><br>
+      
+      <label for="organization">Organization Name:</label>
+      <input type="text" id="organization" name="organization"><br><br>
+      
+      <label for="income">Annual Income:</label>
+      <input type="text" id="income" name="income"><br><br>
+      
+      <label for="family">Family details:</label><br><br>
+      
+      <label for="father_name">Father's name:</label>
+      <input type="text" id="father_name" name="father_name"><br><br>
+      
+      <label for="father_occupation">Father's occupation:</label>
+      <input type="text" id="father_occupation" name="father_occupation"><br><br>
+      
+      <label for="mother_name">Mother's name:</label>
+      <input type="text" id="mother_name" name="mother_name"><br><br>
+      
+      <label for="mother_occupation">Mother's occupation:</label>
+      <input type="text" id="mother_occupation" name="mother_occupation"><br><br>
+      
+      <label for="total_brothers">Total brothers:</label>
+      <input type="number" id="total_brothers" name="total_brothers"><br><br>
+      
+      <label for="total_sisters">Total sisters:</label>
+      <input type="number" id="total_sisters" name="total_sisters"><br><br>
+      
+      <label for="married_brothers">Married brothers:</label>
+      <input type="number" id="married_brothers" name="married_brothers"><br><br>
+      
+      <label for="married_sisters">Married sisters:</label>
+      <input type="number" id="married_sisters" name="married_sisters"><br><br>
+      
+      <label for="contact_number">Contact number:</label>
+      <input type="tel" id="contact_number" name="contact_number"><br><br>
+      
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email"><br><br>
+      
+      <label for="address">Address:</label><br>
+      <input type="text" id="address_line1" name="address_line1" placeholder="Address Line 1"><br>
+      <input type="text" id="address_line2" name="address_line2" placeholder="Address Line 2"><br><br>
+      
+      <input type="submit" value="Submit">
+
+    </form>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
